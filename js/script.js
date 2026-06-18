@@ -3,20 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const openBtn = document.getElementById('openBtn');
     const envelope = document.querySelector('.floating');
 
-    // Corrige quando voltar pela seta do navegador
-    window.addEventListener('pageshow', () => {
-
-        envelope.style.transition = 'none';
-        envelope.style.transform = '';
-        envelope.style.opacity = '';
-
-        // força o navegador a aplicar as mudanças
-        void envelope.offsetWidth;
-
-        envelope.style.transition = '';
-
-    });
-
     openBtn.addEventListener('click', () => {
 
         const ripple = document.createElement('div');
@@ -42,15 +28,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         });
 
-        envelope.style.transition =
-            'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
         envelope.style.transform = 'scale(1.2) translateY(-200px)';
         envelope.style.opacity = '0';
+
+        envelope.style.transition =
+            'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
 
         setTimeout(() => {
             window.location.href = 'proposta.html';
         }, 1000);
 
     });
+
+});
+
+// Quando voltar para a página usando a seta do navegador
+window.addEventListener('pageshow', (event) => {
+
+    if (event.persisted) {
+
+        const envelope = document.querySelector('.floating');
+
+        envelope.style.opacity = '1';
+        envelope.style.transform = '';
+        envelope.style.transition = '';
+
+    }
 
 });
