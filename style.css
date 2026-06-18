@@ -42,8 +42,10 @@
     box-shadow: 0 8px 32px rgba(210,54,54,.08);
 }
 
-.floating {
-    animation: floating 6s ease-in-out infinite;
+.floating.opening {
+    transform: scale(1.2) translateY(-200px);
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes floating {

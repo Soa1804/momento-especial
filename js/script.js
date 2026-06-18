@@ -1,20 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Se a página for restaurada pelo botão Voltar do navegador,
-    // recarrega a página para restaurar o estado inicial.
-    window.addEventListener('pageshow', (event) => {
-        if (event.persisted) {
-            window.location.reload();
-        }
-    });
-
     const openBtn = document.getElementById('openBtn');
     const envelope = document.querySelector('.floating');
 
-    if (openBtn) {
+    window.addEventListener('pageshow', () => {
+
+        if (envelope) {
+            envelope.classList.remove('opening');
+        }
+
+        const ripple = document.getElementById('ripple-effect');
+
+        if (ripple) {
+            ripple.remove();
+        }
+
+    });
+
+    if (openBtn && envelope) {
+
         openBtn.addEventListener('click', () => {
 
             const ripple = document.createElement('div');
+            ripple.id = 'ripple-effect';
 
             ripple.className =
                 'fixed inset-0 pointer-events-none z-[100] bg-white opacity-0 transition-opacity duration-1000';
@@ -37,15 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             });
 
-            envelope.style.transform = 'scale(1.2) translateY(-200px)';
-            envelope.style.opacity = '0';
-            envelope.style.transition =
-                'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
+            envelope.classList.add('opening');
 
             setTimeout(() => {
                 window.location.href = 'proposta.html';
             }, 1000);
+
         });
+
     }
 
 });
