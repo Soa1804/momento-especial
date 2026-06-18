@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Amor - Nosso momento especial</title>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,700&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="/js/tailwind-config.js"></script>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden min-h-screen flex flex-col">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-transparent">
+        <div class="flex justify-between items-center w-full px-container-padding py-base max-w-7xl mx-auto transition-all duration-300 ease-in-out">
+            <h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim italic">
+                Amor
+            </h1>
+
+            <div class="flex items-center gap-stack-sm">
+                <button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">
+                    favorite
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow relative flex flex-col items-center justify-center heart-pattern pt-24 pb-12 overflow-hidden">
+
+        <div class="absolute inset-0 bg-gradient-to-b from-surface via-secondary-fixed/20 to-surface-container pointer-events-none"></div>
+
+        <div class="absolute top-20 left-[10%] w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+
+        <div class="absolute bottom-20 right-[10%] w-80 h-80 bg-secondary-container/30 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 flex flex-col items-center gap-section-gap px-container-padding w-full max-w-2xl text-center">
+
+            <div class="relative group cursor-pointer envelope-shake floating">
+
+                <div class="w-64 h-48 md:w-80 md:h-60 rounded-xl glass-container border-2 border-primary/20 flex items-center justify-center relative overflow-hidden transform group-hover:scale-105 transition-transform duration-500">
+
+                    <div class="absolute top-0 left-0 w-full h-1/2 border-b-2 border-primary/10 bg-surface-container-low/40"></div>
+
+                    <div class="flex flex-col gap-2 w-1/2 items-start">
+                        <div class="h-1.5 w-full bg-primary/10 rounded-full"></div>
+                        <div class="h-1.5 w-3/4 bg-primary/10 rounded-full"></div>
+                        <div class="h-1.5 w-full bg-primary/10 rounded-full"></div>
+                    </div>
+
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 bg-primary shadow-lg rounded-full flex items-center justify-center z-20 border-4 border-white">
+                        <span class="material-symbols-outlined text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">
+                            favorite
+                        </span>
+                    </div>
+                </div>
+
+                <div class="absolute -inset-4 bg-primary/10 blur-2xl rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+            </div>
+
+            <div class="flex flex-col items-center gap-stack-md">
+
+                <div class="space-y-base">
+                    <h2 class="font-headline-md text-headline-md text-primary">
+                        Para a garota mais especial desse mundo, para meu amor.
+                    </h2>
+
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto">
+                        Existe algo especial para você nesse momento muito especial. Espero que goste.
+                    </p>
+                </div>
+
+                <button id="openBtn" class="group relative px-10 py-5 bg-primary text-on-primary rounded-full font-label-bold text-label-bold overflow-hidden shadow-[0_8px_24px_rgba(175,26,33,0.3)] hover:shadow-[0_12px_32px_rgba(175,26,33,0.4)] transition-all duration-300 transform hover:-translate-y-1 active:scale-95">
+                    <span class="relative z-10 flex items-center gap-2">
+                        Abrir carta
+                        <span class="material-symbols-outlined text-lg">mail</span>
+                    </span>
+
+                    <div class="absolute inset-0 bg-primary-container scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="w-full py-stack-md flex flex-col items-center gap-base z-10">
+        
+        <p class="font-label-bold text-label-bold text-secondary dark:text-secondary-fixed-dim">
+            Feito com amor, para o nosso momento especial.
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

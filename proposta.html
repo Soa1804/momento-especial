@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Amor - Nosso momento especial</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script src="../js/tailwind-config.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center w-full px-container-padding py-base max-w-7xl mx-auto bg-transparent">
+        <div class="font-display-lg text-display-lg text-primary dark:text-primary-fixed-dim italic">
+            Amor
+        </div>
+
+        <div class="flex items-center gap-stack-md">
+            <button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity"
+                style="font-variation-settings: 'FILL' 1;">
+                favorite
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center relative p-container-padding">
+
+        <div class="absolute inset-0 pointer-events-none">
+
+            <span class="material-symbols-outlined absolute top-[15%] left-[10%] text-primary opacity-20 text-[48px] floating"
+                style="animation-delay:0s;">
+                favorite
+            </span>
+
+            <span class="material-symbols-outlined absolute bottom-[20%] right-[15%] text-primary opacity-10 text-[64px] floating"
+                style="animation-delay:2s;">
+                favorite
+            </span>
+
+            <span class="material-symbols-outlined absolute top-[40%] right-[5%] text-primary opacity-15 text-[32px] floating"
+                style="animation-delay:4s;">
+                favorite
+            </span>
+
+        </div>
+
+        <div class="relative z-10 w-full max-w-2xl px-4">
+
+            <div id="proposal-container"
+                class="glass-panel rounded-xl p-6 md:p-12 text-center space-y-6 transition-all duration-500">
+
+                <div id="question-state" class="proposal-content space-y-stack-md">
+
+                    <div class="space-y-base">
+
+                        <h1
+                            class="font-display-lg text-4xl md:text-6xl text-primary leading-tight">
+                            Quer namorar comigo?
+                        </h1>
+
+                        <p class="text-on-surface-variant font-body-lg">
+                            Cada momento ao seu lado, me torna uma pessoa melhor, quero realizar todos os sonhos compartilhados com você.
+                        </p>
+
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-6">
+
+                        <button id="sim-btn"
+                        class="w-full sm:w-auto px-10 py-4 bg-primary text-on-primary rounded-full font-label-bold hover:scale-105 transition-transform shadow-lg">
+                            Sim
+                        </button>
+
+                        <button id="fugitive-btn"
+                        class="w-full sm:w-auto px-10 py-4 border-2 border-outline text-on-surface-variant rounded-full font-label-bold hover:bg-surface-container transition-all">
+                            Não
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div id="success-state"
+                    class="success-reveal absolute inset-0 flex flex-col items-center justify-center">
+
+                        <div class="success-card">
+
+                            <div class="w-32 h-32 md:w-48 md:h-48 mb-6 rounded-full overflow-hidden bg-primary-container flex items-center justify-center">
+                                <img class="w-full h-full object-cover" src="gatinhos.png">
+                            </div>
+
+                            <h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary mb-base">
+                                Que Bom que você disse sim!
+                            </h2>
+
+                            <p class="text-on-surface-variant font-body-lg max-w-sm">
+                                O céu estrelado com a lua, se parece comigo e você maluzinha, você é meu céu estrelado, e eu sendo a lua, não consigo brilhar sozinho, se eu não tiver você ao meu lado. Eu te amo minha maluzinha.
+                            </p>
+
+                            <button class="mt-stack-md text-primary font-label-bold underline hover:opacity-70 transition-opacity"
+                                    onclick="window.location.reload()">
+                                Ver novamente
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="w-full py-stack-md flex flex-col items-center gap-base relative z-10 bg-transparent">
+
+        <p class="text-secondary dark:text-secondary-fixed-dim font-label-bold text-label-bold">
+            Feito com amor, para o nosso momento especial.
+        </p>
+
+    </footer>
+
+    <script src="js/proposta.js"></script>
+
+</body>
+
+</html>
